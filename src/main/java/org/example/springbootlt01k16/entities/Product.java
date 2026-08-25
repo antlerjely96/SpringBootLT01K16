@@ -28,9 +28,12 @@ public class Product {
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
-    //Nhiều product thuộc về 1 category
+    //nhiều product thuộc về 1 brand
     @ManyToOne(fetch = FetchType.LAZY)
     //Cột FK
     @JoinColumn(name = "category_id")
     private Category category;
 }
+
+
+
