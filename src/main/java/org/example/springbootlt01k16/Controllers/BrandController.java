@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 //Định nghĩa API
 @RequestMapping("/brands")
+@CrossOrigin(origins = "*")
 public class BrandController {
 
     @Autowired
