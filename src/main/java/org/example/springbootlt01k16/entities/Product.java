@@ -28,6 +28,9 @@ public class Product {
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
+    @Column(name = "image")
+    private String image;
+
     //nhiều product thuộc về 1 brand
     @ManyToOne(fetch = FetchType.LAZY)
     //Cột FK
@@ -88,6 +91,14 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
 
